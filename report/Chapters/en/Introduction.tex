@@ -1,0 +1,36 @@
+% !TeX document-id = {9ccc6fb7-c5f4-4308-9c17-4c226ad62230}
+%%%%%%
+%
+% $Autor: Alpizar, Kumari, JK $
+% $Datum: 2023-01-31 11:59:00Z $
+% $Version: 1.0.0 $
+%
+%
+% !TeX encoding = utf8
+% !TeX root = Rename
+% !TeX TXS-program:bibliography = txs:///biber
+%
+%%%%%%
+
+\chapter{Introduction}
+
+Over the years, technological advancements have constantly been evolving. Among the rapidly emerging innovations, the concept of smart devices and smart homes has been fancied more and more, by both customers and developers. These advancements have one goal - to make our lives easier. Today in the market we have products such as smart bulbs, smart vacuum cleaners, smart speakers, and many more. What each of these products shares in common is an Edge device \autocite{Posey:2020}, an embedded system \autocite{Reidt:2022}, a TinyML framework, and a \ac{ml} algorithm.\\
+
+As per \autocite{Osman:2021}, \ac{ml} has played a crucial role regarding innovation in technical and scientific applications. Running and analyzing large amounts of data on a complex \ac{ml} algorithm requires a significant amount of resources and capabilities, which is a barrier to the mainstreaming of ML in the industry. The recent advances and collaboration of low-power embedded devices and ML could be understood better through TinyML.\\ 
+
+TinyML is a paradigm that makes it easy to run machine learning on embedded edge devices with a very little processor and memory. TinyML typically enables IoT-based embedded edge devices to transition to low-power systems by integrating sophisticated power management modules \autocite{Ray:2022}. Moreover, TinyML eliminates the need for cloud server connectivity and improves responsiveness and privacy measures while running using a coin-size battery \autocite{Osman:2021}.\\
+
+The main advantages of Edge \ac{ai} are data security, latency, energy saving, cost, and no connection dependency. It is required to have a special approach for training the \ac{NN} in Edge to reduce the size of the neural network, accelerate the training process, reduce the memory consumption, and avoid the dependency of needing all data at the same time for this training stage \autocite{Rüb:2022}. Some examples of Edge devices are micro controllers, Raspberry Pi, Arduino, etc.\\
+
+Any \ac{ml} model for an application in speech, text, or image recognition requires features as input. \autocite{Zheng:2018} describes the feature as a numeric representation of raw data. It also explains that feature engineering is required to extract features from raw data, for example, an image, and transform those features into formats suitable for machine learning. Therefore, feature engineering will be a part of this project too. However, this will not be necessarily done manually as there are Tensor FLow libraries that will be helpful in this regard.\\
+
+This introduction section explains the problem description of the project and the challenges associated. The domain knowledge section explains the concepts, tools and technologies that are goong to be used in this project. Furthermore, the KDD process used can be referred in the section named Knowledge discovery in Database process. The development section mentions the implememtation of the steps of the KDD process. Deployment section ellaorates the requirements and steps to make the system up and running. At the end the conclusion and open questions about the project are mentioned. Additionally, information about material list and packages can be found in the Appendix section.
+
+\section{Problem Description}
+
+Harnessing the above concepts, \autocite{Sparber:2020}, \autocite{JHTECH:2017}, \autocite{List:2021} built systems as part of automating their homes for meter readings. This implies it is quite cheap and simple to have a smart meter just by using a device with an integrated camera and an appropriate TinyML framework. One of the advantages of a digital meter is that you won't have to manually check the readings to monitor the usage, instead, you will get an automated notification from your smart meter when you are about to reach the limit. The use cases mentioned above include capturing an image of the meter counter and identifying the readings of the meter. This involves image recognition, \ac{ocr}, and data augmentation using \ac{tfl}.\\
+
+Similar to the aforementioned use cases, the goal of this project includes digitizing an analog meter. Initially, by recognizing one digit using ESP32-CAM and \ac{tfl} libraries with the help of a model trained using \ac{cnn} algorithm. To test this, a printed picture of a digit will be presented in front of the ESP32-CAM system and an output with the corresponding digit is expected. Subsequent improvements will be made depending on the test results.
+
+\section{Challenges}
+Concerning the problem description, there might be a few challenges related to \ac{ocr}. For instance, the inappropriate font size can make character recognition difficult. Also,  \ac{ocr}  might detect only partial text, which would lead to erroneous results \autocite{Martin:2021}. Moreover, the hardware capacity and efficiency can pose another challenge. Another challenge we might face is NaN cases where the number from the meter is not clear on a specific value but is stuck on the transition to the next value. Regarding TinyML, there could be certain issues with inconsistent power usage and memory constraints \autocite{Sagar:2020}. Some additional challenges we expect to arise are the quality of images (the light conditions and clarity), determining the size of the database for efficient performance, processing of images, and performance of the algorithm.\\

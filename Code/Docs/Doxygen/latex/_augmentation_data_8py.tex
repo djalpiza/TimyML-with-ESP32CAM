@@ -1,0 +1,52 @@
+\hypertarget{_augmentation_data_8py}{}\doxysection{Augmentation\+Data.\+py File Reference}
+\label{_augmentation_data_8py}\index{AugmentationData.py@{AugmentationData.py}}
+
+
+This script demonstrates the use of various libraries for working with images.  
+
+
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespace_augmentation_data}{Augmentation\+Data}}
+\begin{DoxyCompactList}\small\item\em This script demonstrates the use of various libraries for working with images. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespace_augmentation_data_a9e864182167892e4a8e3404a27b2a892}{Augmentation\+Data.\+augmentation\+\_\+change}} (input\+\_\+dir, max\+\_\+images)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This script demonstrates the use of various libraries for working with images. 
+
+\hypertarget{_augmentation_data_8py_description_AugmentationData}{}\doxysubsection{Description}\label{_augmentation_data_8py_description_AugmentationData}
+This function performs data augmentation on the images present in the input\+\_\+dir. It applies various image transformation such as width\+\_\+shift, height\+\_\+shift, brightness\+\_\+range and rotation\+\_\+range on the images and saves the augmented images in the same input\+\_\+dir with a different name. Args\+: input\+\_\+dir\+: str\+: The path of the directory containing the images max\+\_\+images\+: int\+: The maximum number of augmented images to be generated per original image Returns\+: None\hypertarget{_augmentation_data_8py_libraries_AugmentationData}{}\doxysubsection{Libraries/\+Modules}\label{_augmentation_data_8py_libraries_AugmentationData}
+
+\begin{DoxyItemize}
+\item glob standard library (\href{https://docs.python.org/3/library/glob.html}{\texttt{ https\+://docs.\+python.\+org/3/library/glob.\+html}})
+\item Allows for file name pattern matching. It is used to find all the files in a directory that match a certain pattern, such as all files with the .jpg extension.
+\item os standard library (\href{https://docs.python.org/3.10/library/os.html}{\texttt{ https\+://docs.\+python.\+org/3.\+10/library/os.\+html}})
+\item Access to operating system interfaces.
+\item numpy package (\href{https://numpy.org/doc/stable/user/index.html}{\texttt{ https\+://numpy.\+org/doc/stable/user/index.\+html}})
+\item Access to support for large, multi-\/dimensional arrays and matrices, along with a large collection of high-\/level mathematical functions to operate on these arrays.
+\item keras.\+preprocessing.\+image standard library (\href{https://keras.io/api/preprocessing/image/}{\texttt{ https\+://keras.\+io/api/preprocessing/image/}})
+\item Provides tools for loading, transforming and augmenting images.
+\item Image\+Data\+Generator class (\href{https://www.tensorflow.org/api_docs/python/tf/keras/preprocessing/image/ImageDataGenerator}{\texttt{ https\+://www.\+tensorflow.\+org/api\+\_\+docs/python/tf/keras/preprocessing/image/\+Image\+Data\+Generator}})
+\item Class in the above module, which allows to instantiate generators of augmented image batches.
+\item PIL Library (\href{https://pypi.org/project/Pillow/}{\texttt{ https\+://pypi.\+org/project/\+Pillow/}})
+\item Python Imaging Library module provides support for opening, manipulating, and saving many different image file formats. Image is class in PIL module which is used for opening and manipulating image files.
+\end{DoxyItemize}\hypertarget{_augmentation_data_8py_notes_AugmentationData}{}\doxysubsection{Notes}\label{_augmentation_data_8py_notes_AugmentationData}
+
+\begin{DoxyItemize}
+\item Comments are Doxygen compatible.
+\end{DoxyItemize}\hypertarget{_augmentation_data_8py_todo_AugmentationData}{}\doxysubsection{TODO}\label{_augmentation_data_8py_todo_AugmentationData}
+
+\begin{DoxyItemize}
+\item None.
+\end{DoxyItemize}\hypertarget{_augmentation_data_8py_author_AugmentationData}{}\doxysubsection{Author(s)}\label{_augmentation_data_8py_author_AugmentationData}
+
+\begin{DoxyItemize}
+\item Created by Dereck Alpizar, Nisha Kumari \& Neeranjan JK on 16/10/2022.
+\item Modified by Dereck Alpizar, Nisha Kumari \& Neeranjan JK on 29/01/2023. 
+\end{DoxyItemize}

@@ -1,0 +1,177 @@
+\hypertarget{main_8cpp}{}\doxysection{main.\+cpp File Reference}
+\label{main_8cpp}\index{main.cpp@{main.cpp}}
+{\ttfamily \#include $<$esp\+\_\+log.\+h$>$}\newline
+{\ttfamily \#include $<$esp\+\_\+system.\+h$>$}\newline
+{\ttfamily \#include $<$nvs\+\_\+flash.\+h$>$}\newline
+{\ttfamily \#include $<$sys/param.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}sdkconfig.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}freertos/\+Free\+RTOS.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}freertos/task.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Helper.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}CImage\+Basis.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}CRotate\+Image.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}CImage\+Cut.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stb\+\_\+image.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stb\+\_\+image\+\_\+write.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stb\+\_\+image\+\_\+resize.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}CTf\+Lite\+Class.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}connect\+\_\+wlan.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}server\+\_\+main.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}esp\+\_\+camera.\+h\char`\"{}}\newline
+Include dependency graph for main.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{main_8cpp_abce06be17fc37d675118a678a8100a36}{app\+\_\+main}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const char $\ast$ \mbox{\hyperlink{main_8cpp_ade454e5bf07cdee4915ff70a3ab3a7a0}{WLAN\+\_\+ssid}} = \char`\"{}FRITZ!\+Box 7590 BC\char`\"{}
+\item 
+const char $\ast$ \mbox{\hyperlink{main_8cpp_a1b83f0ae981011a07a9a7635daac1d51}{WLAN\+\_\+password}} = \char`\"{}51325457781445939271\char`\"{}
+\item 
+int \mbox{\hyperlink{main_8cpp_aefbb0e9df4ac47dc8d316b696526e0d8}{Camera\+\_\+\+Image\+\_\+\+Size\+\_\+x}} = 320
+\item 
+int \mbox{\hyperlink{main_8cpp_a11c4fc0f3e07a0e5e98c29937f2c90ee}{Camera\+\_\+\+Image\+\_\+\+Size\+\_\+y}} = 240
+\item 
+int \mbox{\hyperlink{main_8cpp_a6c16969ea2d1fd283eb8bbef423bd4b7}{Camera\+\_\+\+Channels}} = 3
+\item 
+bool \mbox{\hyperlink{main_8cpp_a25dbd22bc744d3513f1d4f5b563de6be}{ROI\+\_\+rotate}} = false
+\item 
+int \mbox{\hyperlink{main_8cpp_a8769a59fd4a4d16253eeaf6bc402430b}{ROI\+\_\+x}} = 20
+\item 
+int \mbox{\hyperlink{main_8cpp_a2c362a066afca5aa9827472003e9ada0}{ROI\+\_\+y}} = 20
+\item 
+int \mbox{\hyperlink{main_8cpp_ac58df986a29634ea4e312343ce947832}{ROI\+\_\+dx}} = 136
+\item 
+int \mbox{\hyperlink{main_8cpp_a124b8d6d2fa4e78b36f747841e5458e8}{ROI\+\_\+dy}} = 205
+\item 
+std\+::string \mbox{\hyperlink{main_8cpp_a0ea5d54174e920125ac83034c0cd27c7}{image\+\_\+name\+\_\+input}} = \char`\"{}/sdcard/original.\+jpg\char`\"{}
+\item 
+std\+::string \mbox{\hyperlink{main_8cpp_a1603bc8c61d0bcc476ab6aa9b9898903}{image\+\_\+name\+\_\+\+ROI}} = \char`\"{}/sdcard/roi.\+jpg\char`\"{}
+\item 
+std\+::string \mbox{\hyperlink{main_8cpp_a569c2e5b7b6edd57a67e5b13fcaa6a15}{image\+\_\+name\+\_\+resize}} = \char`\"{}/sdcard/resize.\+bmp\char`\"{}
+\item 
+std\+::string \mbox{\hyperlink{main_8cpp_adbe0559636ae05763822af1c8a4c2958}{cnn\+\_\+tflite}} = \char`\"{}/sdcard/dig-\/01.tfl\char`\"{}
+\item 
+int \mbox{\hyperlink{main_8cpp_afc7fe3e9a93861824019ce3a1bcd96f9}{cnn\+\_\+input\+\_\+x}} = 20
+\item 
+int \mbox{\hyperlink{main_8cpp_a447518e656292283e6d0a7057aa30899}{cnn\+\_\+input\+\_\+y}} = 32
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{main_8cpp_abce06be17fc37d675118a678a8100a36}\label{main_8cpp_abce06be17fc37d675118a678a8100a36}} 
+\index{main.cpp@{main.cpp}!app\_main@{app\_main}}
+\index{app\_main@{app\_main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{app\_main()}{app\_main()}}
+{\footnotesize\ttfamily void app\+\_\+main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{main_8cpp_a6c16969ea2d1fd283eb8bbef423bd4b7}\label{main_8cpp_a6c16969ea2d1fd283eb8bbef423bd4b7}} 
+\index{main.cpp@{main.cpp}!Camera\_Channels@{Camera\_Channels}}
+\index{Camera\_Channels@{Camera\_Channels}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{Camera\_Channels}{Camera\_Channels}}
+{\footnotesize\ttfamily int Camera\+\_\+\+Channels = 3}
+
+\mbox{\Hypertarget{main_8cpp_aefbb0e9df4ac47dc8d316b696526e0d8}\label{main_8cpp_aefbb0e9df4ac47dc8d316b696526e0d8}} 
+\index{main.cpp@{main.cpp}!Camera\_Image\_Size\_x@{Camera\_Image\_Size\_x}}
+\index{Camera\_Image\_Size\_x@{Camera\_Image\_Size\_x}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{Camera\_Image\_Size\_x}{Camera\_Image\_Size\_x}}
+{\footnotesize\ttfamily int Camera\+\_\+\+Image\+\_\+\+Size\+\_\+x = 320}
+
+\mbox{\Hypertarget{main_8cpp_a11c4fc0f3e07a0e5e98c29937f2c90ee}\label{main_8cpp_a11c4fc0f3e07a0e5e98c29937f2c90ee}} 
+\index{main.cpp@{main.cpp}!Camera\_Image\_Size\_y@{Camera\_Image\_Size\_y}}
+\index{Camera\_Image\_Size\_y@{Camera\_Image\_Size\_y}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{Camera\_Image\_Size\_y}{Camera\_Image\_Size\_y}}
+{\footnotesize\ttfamily int Camera\+\_\+\+Image\+\_\+\+Size\+\_\+y = 240}
+
+\mbox{\Hypertarget{main_8cpp_afc7fe3e9a93861824019ce3a1bcd96f9}\label{main_8cpp_afc7fe3e9a93861824019ce3a1bcd96f9}} 
+\index{main.cpp@{main.cpp}!cnn\_input\_x@{cnn\_input\_x}}
+\index{cnn\_input\_x@{cnn\_input\_x}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{cnn\_input\_x}{cnn\_input\_x}}
+{\footnotesize\ttfamily int cnn\+\_\+input\+\_\+x = 20}
+
+\mbox{\Hypertarget{main_8cpp_a447518e656292283e6d0a7057aa30899}\label{main_8cpp_a447518e656292283e6d0a7057aa30899}} 
+\index{main.cpp@{main.cpp}!cnn\_input\_y@{cnn\_input\_y}}
+\index{cnn\_input\_y@{cnn\_input\_y}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{cnn\_input\_y}{cnn\_input\_y}}
+{\footnotesize\ttfamily int cnn\+\_\+input\+\_\+y = 32}
+
+\mbox{\Hypertarget{main_8cpp_adbe0559636ae05763822af1c8a4c2958}\label{main_8cpp_adbe0559636ae05763822af1c8a4c2958}} 
+\index{main.cpp@{main.cpp}!cnn\_tflite@{cnn\_tflite}}
+\index{cnn\_tflite@{cnn\_tflite}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{cnn\_tflite}{cnn\_tflite}}
+{\footnotesize\ttfamily std\+::string cnn\+\_\+tflite = \char`\"{}/sdcard/dig-\/01.tfl\char`\"{}}
+
+\mbox{\Hypertarget{main_8cpp_a0ea5d54174e920125ac83034c0cd27c7}\label{main_8cpp_a0ea5d54174e920125ac83034c0cd27c7}} 
+\index{main.cpp@{main.cpp}!image\_name\_input@{image\_name\_input}}
+\index{image\_name\_input@{image\_name\_input}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{image\_name\_input}{image\_name\_input}}
+{\footnotesize\ttfamily std\+::string image\+\_\+name\+\_\+input = \char`\"{}/sdcard/original.\+jpg\char`\"{}}
+
+\mbox{\Hypertarget{main_8cpp_a569c2e5b7b6edd57a67e5b13fcaa6a15}\label{main_8cpp_a569c2e5b7b6edd57a67e5b13fcaa6a15}} 
+\index{main.cpp@{main.cpp}!image\_name\_resize@{image\_name\_resize}}
+\index{image\_name\_resize@{image\_name\_resize}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{image\_name\_resize}{image\_name\_resize}}
+{\footnotesize\ttfamily std\+::string image\+\_\+name\+\_\+resize = \char`\"{}/sdcard/resize.\+bmp\char`\"{}}
+
+\mbox{\Hypertarget{main_8cpp_a1603bc8c61d0bcc476ab6aa9b9898903}\label{main_8cpp_a1603bc8c61d0bcc476ab6aa9b9898903}} 
+\index{main.cpp@{main.cpp}!image\_name\_ROI@{image\_name\_ROI}}
+\index{image\_name\_ROI@{image\_name\_ROI}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{image\_name\_ROI}{image\_name\_ROI}}
+{\footnotesize\ttfamily std\+::string image\+\_\+name\+\_\+\+ROI = \char`\"{}/sdcard/roi.\+jpg\char`\"{}}
+
+\mbox{\Hypertarget{main_8cpp_ac58df986a29634ea4e312343ce947832}\label{main_8cpp_ac58df986a29634ea4e312343ce947832}} 
+\index{main.cpp@{main.cpp}!ROI\_dx@{ROI\_dx}}
+\index{ROI\_dx@{ROI\_dx}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{ROI\_dx}{ROI\_dx}}
+{\footnotesize\ttfamily int ROI\+\_\+dx = 136}
+
+\mbox{\Hypertarget{main_8cpp_a124b8d6d2fa4e78b36f747841e5458e8}\label{main_8cpp_a124b8d6d2fa4e78b36f747841e5458e8}} 
+\index{main.cpp@{main.cpp}!ROI\_dy@{ROI\_dy}}
+\index{ROI\_dy@{ROI\_dy}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{ROI\_dy}{ROI\_dy}}
+{\footnotesize\ttfamily int ROI\+\_\+dy = 205}
+
+\mbox{\Hypertarget{main_8cpp_a25dbd22bc744d3513f1d4f5b563de6be}\label{main_8cpp_a25dbd22bc744d3513f1d4f5b563de6be}} 
+\index{main.cpp@{main.cpp}!ROI\_rotate@{ROI\_rotate}}
+\index{ROI\_rotate@{ROI\_rotate}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{ROI\_rotate}{ROI\_rotate}}
+{\footnotesize\ttfamily bool ROI\+\_\+rotate = false}
+
+\mbox{\Hypertarget{main_8cpp_a8769a59fd4a4d16253eeaf6bc402430b}\label{main_8cpp_a8769a59fd4a4d16253eeaf6bc402430b}} 
+\index{main.cpp@{main.cpp}!ROI\_x@{ROI\_x}}
+\index{ROI\_x@{ROI\_x}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{ROI\_x}{ROI\_x}}
+{\footnotesize\ttfamily int ROI\+\_\+x = 20}
+
+\mbox{\Hypertarget{main_8cpp_a2c362a066afca5aa9827472003e9ada0}\label{main_8cpp_a2c362a066afca5aa9827472003e9ada0}} 
+\index{main.cpp@{main.cpp}!ROI\_y@{ROI\_y}}
+\index{ROI\_y@{ROI\_y}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{ROI\_y}{ROI\_y}}
+{\footnotesize\ttfamily int ROI\+\_\+y = 20}
+
+\mbox{\Hypertarget{main_8cpp_a1b83f0ae981011a07a9a7635daac1d51}\label{main_8cpp_a1b83f0ae981011a07a9a7635daac1d51}} 
+\index{main.cpp@{main.cpp}!WLAN\_password@{WLAN\_password}}
+\index{WLAN\_password@{WLAN\_password}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{WLAN\_password}{WLAN\_password}}
+{\footnotesize\ttfamily const char$\ast$ WLAN\+\_\+password = \char`\"{}51325457781445939271\char`\"{}}
+
+\mbox{\Hypertarget{main_8cpp_ade454e5bf07cdee4915ff70a3ab3a7a0}\label{main_8cpp_ade454e5bf07cdee4915ff70a3ab3a7a0}} 
+\index{main.cpp@{main.cpp}!WLAN\_ssid@{WLAN\_ssid}}
+\index{WLAN\_ssid@{WLAN\_ssid}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{WLAN\_ssid}{WLAN\_ssid}}
+{\footnotesize\ttfamily const char$\ast$ WLAN\+\_\+ssid = \char`\"{}FRITZ!\+Box 7590 BC\char`\"{}}
+

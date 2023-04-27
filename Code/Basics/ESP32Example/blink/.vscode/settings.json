@@ -1,0 +1,4 @@
+{
+    "idf.adapterTargetName": "esp32",
+    "C_Cpp.errorSquiggles": "Disabled"
+}

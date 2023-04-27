@@ -1,0 +1,32 @@
+% !TeX document-id = {9ccc6fb7-c5f4-4308-9c17-4c226ad62230}
+%%%%%%
+%
+% $Autor: Alpizar, Kumari, JK $
+% $Datum: 2023-01-31 11:59:00Z $
+% $Version: 1.0.0 $
+%
+%
+% !TeX encoding = utf8
+% !TeX root = Rename
+% !TeX TXS-program:bibliography = txs:///biber
+%
+%%%%%%
+
+\graphicspath{ {./images/} }
+
+
+\chapter{Problem's Description \& Challenges}
+
+\section{Problem's Description}
+
+The modern world can be considered a system under constant evolution and improvement. In the latest years, the biggest changes in technology and society are guided by digitization. Analog sources of information are suffering a massive transformation towards the digital world. On this line IoT \ac{iot} and Machine Learning \ac{ml} have taken a protagonist role, enabling a wide variety of applications. Progressively, an embedding machine learning revolution is the common scenario for development. Image detection/classification seemed to be a complex and time-consuming goal to implement. However,  thanks to current sources of technology and information, a clear opportunity to employ them; for example in analog counter detection is provided.\\
+
+Analog counter detection presents a clear improvement opportunity towards automation, and digitization. This take special relevance mainly, because often, such meters can not be simply replaced by a digital device; therefore a gap for improvement is detected on the need for means of automated reading from the analog meters \autocite{Alexeev:2020}.  The first and clearest benefit out of the implementation is getting the readings in a digital manner, enabling the reading from places hard to constantly access or to enable people with motion disabilities to acquire these information. Additionally, via this application we can target eventual malfunctioning errors from the meters. By continuous monitor of these analog systems, the possibility for issue anticipation and predictive maintenance has the potential to save a lot of money. On the other hand, data security; can also take key relevance for this application, since sensitive data is handled and processed.
+
+\section{Challenges}
+The project is established over two major fields of development, Machine Learning \ac{ml}, and Edge computing. How these two concepts interact between each other represent a major threat. Edge computing provides many advantages for applications that are focused on sensors, mobile devices, end users, and Internet of Things \ac{iot}. With the proliferation of this last component, the number of edge devices and the data generated from the edge have been growing rapidly \autocite{Shi:2019}. These useful devices are resource-constrained systems in the majority of cases are powered by a simple battery. And this feature is essential for their long lasting performance, since they are also designed to last for a long time with less than 0.2W power consumption (0.1W is the typical power for ESP32-CAM).\\
+
+However not everything is perfect when developing on the edge; there are also constraints directly attached to these technology. More specifically regarding its computational power. The main obstacle to be faced comes from the fact that in order to meet the computational requirements of complex machine learning models, the available resources in the device comes short in the majority of applications. Leverage cloud computing is the most common approach, this way, by cloud resources, data must be moved from its source location on the network edge [e.g., from sensors or smartphones] to a centralized location in the cloud.\autocite{Chen:2019} This is not a feasible solution for this project application. The use of an SD card and the extended memory are very advantageous for neural networks, that will be the main model implementation. In principle, the neural networks can also be completely mapped in the firmware only. However, if the model get more complexity and the size of neural networks with reaches a point where more than 100,000 nodes are implemented it quickly becomes clear that the available internal resources constraint the performance (In this case, for ESP32-CAM, 512kByte SRAM). \autocite{Muller:2020}\\
+ 
+A second challenge is understanding how this specific edge device can coordinate with other edge devices [e.g. cellphone or other sensors for additional measurements] and with an eventual cloud service. The effect of this interaction is possible heterogeneous processing capabilities and dynamic network conditions. So when implementing the project under these circumstances, it is necessary to ensure a good end-to-end application-level performance. However this application is out of the current scope of the prototype, this is brought to bounds for future enthusiastic to take it on further objectives. \\
+

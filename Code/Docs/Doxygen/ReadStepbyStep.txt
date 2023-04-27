@@ -1,0 +1,6 @@
+Steps: 
+1. Open a file explorer or navigate to the directory where the "html" folder is located.
+2. Inside the "html" folder, locate the file named "index.html"
+3. Right-click on the "index.html" file and select "Open with" from the context menu.
+4. From the options, select a web browser, such as Google Chrome, Mozilla Firefox, or Microsoft Edge, to open the file.
+5. The Doxygen documentation for the developed code will be displayed in the web browser, and you can use the navigation menu on the left side to access different sections of the documentation.

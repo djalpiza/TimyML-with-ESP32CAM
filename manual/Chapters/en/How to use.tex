@@ -1,0 +1,74 @@
+%%%%%%
+%
+%%%
+%
+% $Autor: Kumari $
+% $Datum: 2021-05-14 $
+% $Pfad: GitLab/210419KDDInverseKinematic $
+% $Dateiname: Introduction
+% $Version: 4620 $
+%
+% !TeX spellcheck = de_GB
+% !TeX program = pdflatex
+% !BIB program = biber
+% !TeX encoding = utf8
+%
+%%%
+
+
+\chapter{How to use}
+
+\section{Hardware Setup}
+Requirements are as follows:
+\begin{itemize}
+	\item ESP32 development board: This will be the main microcontroller that will read the analog input from the analog meter and send the data to your computer or the internet.
+	\item Analog water/electricity meter: This is the device that will measure the amount of volume/energy consumed. It will output the number that corresponds to the amount of electricity/water consumed.
+	\item USB cable: This will be used to connect the ESP32 to your computer to upload the code and monitor the data.
+	\item Power supply: The ESP32 can be powered through USB or an external power supply, a typical voltage range is 3.3V
+	\item Connecting wires or ESP MB can be used to connect the ESP32 to the digital electricity meter.
+\end{itemize}
+
+\subsection{Steps to get Hardware started}
+\begin{itemize}
+	\item Install the ESP32 cam in front of the analog meter and connect it to the meter using appropriate connection wires.
+	\item Install the necessary libraries in the Visual Studio: Open the IDE, go to the library manager, and install any libraries necessary to interact with the meter and the ESP32 board.
+	\item Test the already uploaded code by opening the serial monitor and sending commands to the ESP32.
+\end{itemize}
+
+\section{Software Setup}
+Requirements:
+\begin{itemize}
+	\item Visual Studio
+	\item Python (version 3.9)
+	\item ESP-IDF
+	\item Required Python libraries
+\end{itemize}
+
+To setup the code Visual Studio code is required. Also, ESP-IDF plugin is required to develop, build, flash, monitor and debug the code loaded in to ESP32 devices.\\
+
+Steps to install the Visual Studio code are mentioned in our team report under DomainKnowledge chapter in section Visual Studio Code.
+
+\subsection{Steps to setup code}
+\paragraph{Important files}
+Install the necessary libraries mentioned in requirements text file at location :  ../ML23-05-Counter-Detection-EPS32/Code/Docs/Requirements.txt.\\
+
+The main.py python file is at location : ../ML23-05-Counter-Detection-EPS32/Code/main.py.\\
+
+The original dataset (folder- ImagesOriginal), python files for image augmentation, for modifying brightness and for scaling data are stored at location : /Users/nishakumari/Documents/GitHub/ML23-05-Counter-Detection-EPS32/Code. Also, this location has the final images after data tranformation in the folder ImagesFinal and the validation images in folder ImagesValidation.\\
+
+\paragraph{To run.py files}
+To run a .py file in Visual Studio Code, you will need to have Python installed on your computer. Once you have Python installed, you can follow these steps to run a .py file in Visual Studio Code:
+\begin{itemize}
+	\item Open the .py file in Visual Studio Code.
+	\item Open the integrated terminal by clicking on the terminal tab or by pressing ctrl + .
+	\item In the terminal, type "python" followed by the name of the .py file and press enter. For example, if the name of the file is "hello.py", you would type "python hello.py" and press enter.
+	\item The code in the .py file will now run and the output will be displayed in the terminal.
+	\item Alternatively, you can also run the code by using the VS Code extension "Python" which allows you to run the code and have better debugging capabilities and also have intellisense for python.
+	\item It's worth mentioning that you can also use the built-in debugging features to debug your Python code in Visual Studio Code by installing the Python extension, then set a breakpoint and start debugging.
+\end{itemize}
+
+
+
+
+
+

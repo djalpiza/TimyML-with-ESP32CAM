@@ -1,0 +1,114 @@
+%Packages
+\usepackage[utf8]{inputenc} %Für Umlaute, da BibLaTeX
+\usepackage[german]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{colortbl}
+\usepackage{cancel} %'\cancel{}', '\bcancel{}' und '\xcancel{}'
+
+%%%%%%%%%2-Screen%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{pgfpages} 
+%%%%Kommentiert für Beamer
+%%%%Aktiv für Notes
+%\setbeameroption{show notes on second screen=bottom}
+%\setbeameroption{second mode text on second screen=bottom}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%Für Grafiken
+\usepackage{tikz}
+\usepackage{gnuplottex}
+\usepackage{pgf}
+\usepackage{colortbl} 
+\usetikzlibrary{calc}
+\usetikzlibrary{shapes,arrows} %Für Flowchart
+\usetikzlibrary{shapes.geometric} %Für Flowchart
+\usepackage{scalefnt}
+\usetikzlibrary{decorations.markings} %Für => pfeile
+\usetikzlibrary{calc,patterns,decorations.pathmorphing,decorations.markings}
+%Metadaten
+\title{Counter Detection with ESP32}
+%\subtitle{Bang-Bang-Control}
+%\institution{HS Emden/Leer - MSR-Labor}
+\author{Presenters : Dereck Alpizar, Neeranjan JK, Nisha Kumari}
+%\date{\today}
+\date{\today}
+%Für urls in Quellen
+\usepackage{url}
+%Für Diagramme (autotools)
+%\usepackage{graphicx}
+%\usepackage{graphviz}
+
+%Formatierungen
+\mode<presentation>
+\setbeamertemplate{headline} 
+{%
+\begin{beamercolorbox}[rounded=true, center]{bgcolor}
+\begin{columns}[T]
+\begin{column}{9cm}
+{\color{gray}\begin{tiny}Hochschule Emden/Leer\end{tiny}} \\ 
+{\color{gray}\begin{tiny}Master Business Intelligence and Data Analytics\end{tiny}} \\ 
+{\color{gray}\begin{tiny}Counter detection with ESP32\end{tiny}} \\
+{\color{gray}\begin{tiny}Dereck Alpizar, Neeranjan JK, Nisha Kumari \end{tiny}}
+%{\color{gray}\begin{tiny}Innovationsforum MSR\end{tiny}}
+\end{column}
+\begin{column}{2cm}
+\includegraphics[scale=0.25]{img/technik.jpg}
+\end{column}
+\end{columns}
+\end{beamercolorbox}
+ }
+\insertsectionhead
+\insertsubsectionhead
+\usetheme{default}
+\useinnertheme[shadow=true]{rounded}
+\usebackgroundtemplate
+{%
+      \rule{0pt}{\paperheight}%
+      \hspace*{\paperwidth}%
+      \makebox[0pt][r]{\includegraphics[width=\paperwidth]{img/hintergrund2.png}}
+ }
+
+\definecolor{HSELhellblau}{RGB}{138,198,203}
+\definecolor{HSELblau}{RGB}{0,59,95}
+\usecolortheme[named=HSELblau]{structure}
+ \newcommand{\topline}{%
+  \tikz[remember picture,overlay] {%
+    \draw[HSELhellblau] ([yshift=-0.9cm]current page.north west)
+             -- ([yshift=-0.9cm,xshift=\paperwidth]current page.north west);}}
+\setbeamertemplate{section}[numbered]
+
+
+\newcommand{\STANDARD}[2]
+{
+  \mode<presentation>%
+  {%
+     \begin{frame}[allowframebreaks]{#1} #2 \end{frame}
+  }%
+  \mode<article>
+  {
+    \fcolorbox{AliceBlue}%{Bisque} %{BlanchedAlmond}
+    {LightGrey} %{Beige}   %{AliceBlue}
+    {
+      \begin{minipage}{\textwidth}{\bf #1} #2  \end{minipage}
+      
+      
+    }%
+    
+    \medskip
+    \hrulefill
+  }
+}
+
+\newcommand{\MYNOTE}[1]
+{
+  \mode<presentation>%
+  {%
+     %\note{#1}
+     \only<article>{#1}
+  }%
+  \mode<article>
+  {
+    #1
+  }
+}

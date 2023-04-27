@@ -1,0 +1,1 @@
+This folder contains the ESP32 Case design as Catia V5 Part model

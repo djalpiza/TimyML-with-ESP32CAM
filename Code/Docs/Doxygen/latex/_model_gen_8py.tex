@@ -1,0 +1,66 @@
+\hypertarget{_model_gen_8py}{}\doxysection{Model\+Gen.\+py File Reference}
+\label{_model_gen_8py}\index{ModelGen.py@{ModelGen.py}}
+
+
+This function loads, preprocesses, and trains a CNN model on image data, then saves the trained model to a specified file path.  
+
+
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespace_model_gen}{Model\+Gen}}
+\begin{DoxyCompactList}\small\item\em This function loads, preprocesses, and trains a CNN model on image data, then saves the trained model to a specified file path. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespace_model_gen_aef521becf91d3cb7d1cd43bb4162bbb0}{Model\+Gen.\+model\+\_\+generation}} (input\+\_\+dir, model\+\_\+path, epoch\+\_\+\+Number)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This function loads, preprocesses, and trains a CNN model on image data, then saves the trained model to a specified file path. 
+
+\hypertarget{_model_gen_8py_description_ModelGen}{}\doxysubsection{Description}\label{_model_gen_8py_description_ModelGen}
+Function that generates the model, trains it and saves it. param input\+\_\+dir\+: directory where the images are located param model\+\_\+path\+: path where the model will be saved param epoch\+\_\+\+Number\+: Number of training epochs\hypertarget{_model_gen_8py_libraries_ModelGen}{}\doxysubsection{Libraries/\+Modules}\label{_model_gen_8py_libraries_ModelGen}
+
+\begin{DoxyItemize}
+\item glob standard library (\href{https://docs.python.org/3/library/glob.html}{\texttt{ https\+://docs.\+python.\+org/3/library/glob.\+html}})
+\item Allows for file name pattern matching. It is used to find all the files in a directory that match a certain pattern, such as all files with the .jpg extension.
+\item os standard library (\href{https://docs.python.org/3.10/library/os.html}{\texttt{ https\+://docs.\+python.\+org/3.\+10/library/os.\+html}})
+\item Access to operating system interfaces.
+\item numpy package (\href{https://numpy.org/doc/stable/user/index.html}{\texttt{ https\+://numpy.\+org/doc/stable/user/index.\+html}})
+\item Access to support for large, multi-\/dimensional arrays and matrices, along with a large collection of high-\/level mathematical functions to operate on these arrays.
+\item keras.\+preprocessing.\+image standard library (\href{https://keras.io/api/preprocessing/image/}{\texttt{ https\+://keras.\+io/api/preprocessing/image/}})
+\item Provides tools for loading, transforming and augmenting images.
+\item Image\+Data\+Generator class (\href{https://www.tensorflow.org/api_docs/python/tf/keras/preprocessing/image/ImageDataGenerator}{\texttt{ https\+://www.\+tensorflow.\+org/api\+\_\+docs/python/tf/keras/preprocessing/image/\+Image\+Data\+Generator}})
+\item Class in the above module, which allows to instantiate generators of augmented image batches.
+\item PIL Library (\href{https://pypi.org/project/Pillow/}{\texttt{ https\+://pypi.\+org/project/\+Pillow/}})
+\item Python Imaging Library module provides support for opening, manipulating, and saving many different image file formats. Image is class in PIL module which is used for opening and manipulating image files.
+\item display (\href{https://holoviews.org/Reference_Manual/holoviews.ipython.html}{\texttt{ https\+://holoviews.\+org/\+Reference\+\_\+\+Manual/holoviews.\+ipython.\+html}})
+\item This import is used to display interactive images and plots in Jupyter notebooks.
+\item matplotlib (\href{https://matplotlib.org/}{\texttt{ https\+://matplotlib.\+org/}})
+\item This import is used to create static plots and charts using the matplotlib library.
+\item load\+\_\+model (\href{https://www.tensorflow.org/api_docs/python/tf/keras/models/load_model}{\texttt{ https\+://www.\+tensorflow.\+org/api\+\_\+docs/python/tf/keras/models/load\+\_\+model}})
+\item This import is used to load a pre-\/trained Keras model from a file.
+\item metrics (\href{https://scikit-learn.org/stable/modules/model_evaluation.html}{\texttt{ https\+://scikit-\/learn.\+org/stable/modules/model\+\_\+evaluation.\+html}})
+\item This import is used to calculate performance metrics for machine learning models using the scikit-\/learn library.
+\item cnn\+\_\+model (Code/model/\+CNNset.\+py)
+\item This import is used to import the CNN model.
+\item cnn\+\_\+train (Code/model/\+Train.\+py)
+\item This import is used to train the CNN model.
+\item save\+\_\+model (Code/model/\+Save\+Model.\+py)
+\item This import is used to save the CNN model.
+\end{DoxyItemize}\hypertarget{_model_gen_8py_notes_ModelGen}{}\doxysubsection{Notes}\label{_model_gen_8py_notes_ModelGen}
+
+\begin{DoxyItemize}
+\item Comments are Doxygen compatible.
+\end{DoxyItemize}\hypertarget{_model_gen_8py_todo_ModelGen}{}\doxysubsection{TODO}\label{_model_gen_8py_todo_ModelGen}
+
+\begin{DoxyItemize}
+\item None.
+\end{DoxyItemize}\hypertarget{_model_gen_8py_author_ModelGen}{}\doxysubsection{Author(s)}\label{_model_gen_8py_author_ModelGen}
+
+\begin{DoxyItemize}
+\item Created by Dereck Alpizar, Nisha Kumari \& Neeranjan JK on 16/10/2022.
+\item Modified by Dereck Alpizar, Nisha Kumari \& Neeranjan JK on 29/01/2023. 
+\end{DoxyItemize}

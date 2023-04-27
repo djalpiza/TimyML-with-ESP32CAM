@@ -1,0 +1,62 @@
+\hypertarget{_c_n_n_validator_8py}{}\doxysection{CNNValidator.\+py File Reference}
+\label{_c_n_n_validator_8py}\index{CNNValidator.py@{CNNValidator.py}}
+
+
+This function takes a pre-\/trained model and a validation directory to calculate confusion matrix of the results.  
+
+
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespace_c_n_n_validator}{CNNValidator}}
+\begin{DoxyCompactList}\small\item\em This function takes a pre-\/trained model and a validation directory to calculate confusion matrix of the results. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespace_c_n_n_validator_aef8810995a7710f371b005b72ac0fbec}{CNNValidator.\+validator}} (Model\+Name\+And\+Version, val\+\_\+dir)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This function takes a pre-\/trained model and a validation directory to calculate confusion matrix of the results. 
+
+\hypertarget{_c_n_n_validator_8py_description_CNNValidator}{}\doxysubsection{Description}\label{_c_n_n_validator_8py_description_CNNValidator}
+This function runs the validator for the model. It loads the model, summarizes it, and then uses the model to predict the values for images in the validation directory. It then compares the predicted values to the actual values and plots the results. param Model\+Name\+And\+Version\+: The name and version of the model to be loaded. param val\+\_\+dir\+: The directory containing the validation images. Return\+: None\hypertarget{_c_n_n_validator_8py_libraries_CNNValidator}{}\doxysubsection{Libraries/\+Modules}\label{_c_n_n_validator_8py_libraries_CNNValidator}
+
+\begin{DoxyItemize}
+\item glob standard library (\href{https://docs.python.org/3/library/glob.html}{\texttt{ https\+://docs.\+python.\+org/3/library/glob.\+html}})
+\item Allows for file name pattern matching. It is used to find all the files in a directory that match a certain pattern, such as all files with the .jpg extension.
+\item os standard library (\href{https://docs.python.org/3.10/library/os.html}{\texttt{ https\+://docs.\+python.\+org/3.\+10/library/os.\+html}})
+\item Access to operating system interfaces.
+\item numpy package (\href{https://numpy.org/doc/stable/user/index.html}{\texttt{ https\+://numpy.\+org/doc/stable/user/index.\+html}})
+\item Access to support for large, multi-\/dimensional arrays and matrices, along with a large collection of high-\/level mathematical functions to operate on these arrays.
+\item keras.\+preprocessing.\+image standard library (\href{https://keras.io/api/preprocessing/image/}{\texttt{ https\+://keras.\+io/api/preprocessing/image/}})
+\item Provides tools for loading, transforming and augmenting images.
+\item Image\+Data\+Generator class (\href{https://www.tensorflow.org/api_docs/python/tf/keras/preprocessing/image/ImageDataGenerator}{\texttt{ https\+://www.\+tensorflow.\+org/api\+\_\+docs/python/tf/keras/preprocessing/image/\+Image\+Data\+Generator}})
+\item Class in the above module, which allows to instantiate generators of augmented image batches.
+\item PIL Library (\href{https://pypi.org/project/Pillow/}{\texttt{ https\+://pypi.\+org/project/\+Pillow/}})
+\item Python Imaging Library module provides support for opening, manipulating, and saving many different image file formats. Image is class in PIL module which is used for opening and manipulating image files.
+\item display (\href{https://holoviews.org/Reference_Manual/holoviews.ipython.html}{\texttt{ https\+://holoviews.\+org/\+Reference\+\_\+\+Manual/holoviews.\+ipython.\+html}})
+\item This import is used to display interactive images and plots in Jupyter notebooks.
+\item matplotlib (\href{https://matplotlib.org/}{\texttt{ https\+://matplotlib.\+org/}})
+\item This import is used to create static plots and charts using the matplotlib library.
+\item load\+\_\+model (\href{https://www.tensorflow.org/api_docs/python/tf/keras/models/load_model}{\texttt{ https\+://www.\+tensorflow.\+org/api\+\_\+docs/python/tf/keras/models/load\+\_\+model}})
+\item This import is used to load a pre-\/trained Keras model from a file.
+\item metrics (\href{https://scikit-learn.org/stable/modules/model_evaluation.html}{\texttt{ https\+://scikit-\/learn.\+org/stable/modules/model\+\_\+evaluation.\+html}})
+\item This import is used to calculate performance metrics for machine learning models using the scikit-\/learn library.
+\item scaling (Code/data/\+Scaling\+Data.\+py)
+\item This import is used to import the function scaling from the module \mbox{\hyperlink{namespace_scaling_data}{Scaling\+Data}} located in the data directory.
+\end{DoxyItemize}\hypertarget{_c_n_n_validator_8py_notes_CNNValidator}{}\doxysubsection{Notes}\label{_c_n_n_validator_8py_notes_CNNValidator}
+
+\begin{DoxyItemize}
+\item Comments are Doxygen compatible.
+\end{DoxyItemize}\hypertarget{_c_n_n_validator_8py_todo_CNNValidator}{}\doxysubsection{TODO}\label{_c_n_n_validator_8py_todo_CNNValidator}
+
+\begin{DoxyItemize}
+\item None.
+\end{DoxyItemize}\hypertarget{_c_n_n_validator_8py_author_CNNValidator}{}\doxysubsection{Author(s)}\label{_c_n_n_validator_8py_author_CNNValidator}
+
+\begin{DoxyItemize}
+\item Created by Dereck Alpizar, Nisha Kumari \& Neeranjan JK on 16/10/2022.
+\item Modified by Dereck Alpizar, Nisha Kumari \& Neeranjan JK on 29/01/2023. 
+\end{DoxyItemize}

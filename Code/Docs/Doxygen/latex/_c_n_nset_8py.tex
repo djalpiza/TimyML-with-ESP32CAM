@@ -1,0 +1,55 @@
+\hypertarget{_c_n_nset_8py}{}\doxysection{CNNset.\+py File Reference}
+\label{_c_n_nset_8py}\index{CNNset.py@{CNNset.py}}
+
+
+This function creates and compiles a convolutional neural network model using the Sequential API from Keras.  
+
+
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespace_c_n_nset}{CNNset}}
+\begin{DoxyCompactList}\small\item\em This function creates and compiles a convolutional neural network model using the Sequential API from Keras. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespace_c_n_nset_a1fe4706de9546c08298f71081dbbc1ed}{CNNset.\+cnn\+\_\+model}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This function creates and compiles a convolutional neural network model using the Sequential API from Keras. 
+
+\hypertarget{_c_n_nset_8py_description_CNNset}{}\doxysubsection{Description}\label{_c_n_nset_8py_description_CNNset}
+This function creates a convolutional neural network (CNN) model using the Keras library, with the following architecture\+:
+\begin{DoxyItemize}
+\item Batch normalization layer
+\item Convolutional layer with 16 filters and 3x3 kernel size, with Re\+LU activation function
+\item Max pooling layer with 2x2 pool size
+\item Convolutional layer with 32 filters and 3x3 kernel size, with Re\+LU activation function
+\item Max pooling layer with 2x2 pool size
+\item Convolutional layer with 16 filters and 3x3 kernel size, with Re\+LU activation function
+\item Max pooling layer with 2x2 pool size
+\item Flatten layer
+\item Dense layer with 128 units and Re\+LU activation function
+\item Dense layer with 11 units and softmax activation function The model is then compiled with the categorical crossentropy loss function, Adadelta optimizer, and accuracy metric. Return\+: The created CNN model
+\end{DoxyItemize}\hypertarget{_c_n_nset_8py_libraries_CNNset}{}\doxysubsection{Libraries/\+Modules}\label{_c_n_nset_8py_libraries_CNNset}
+
+\begin{DoxyItemize}
+\item Adadelta (\href{https://www.tensorflow.org/api_docs/python/tf/keras/optimizers/experimental/Adadelta}{\texttt{ https\+://www.\+tensorflow.\+org/api\+\_\+docs/python/tf/keras/optimizers/experimental/\+Adadelta}})
+\item Optimizer used to optimize the weights of the neural network.
+\item Sequential (\href{https://keras.io/guides/sequential_model/}{\texttt{ https\+://keras.\+io/guides/sequential\+\_\+model/}})
+\item model class used to create a linear stack of layers in the neural network.
+\item categorical\+\_\+crossentropy (\href{https://www.tensorflow.org/api_docs/python/tf/keras/metrics/categorical_crossentropy}{\texttt{ https\+://www.\+tensorflow.\+org/api\+\_\+docs/python/tf/keras/metrics/categorical\+\_\+crossentropy}})
+\item Loss function used to calculate the difference between the predicted and actual output of the model.
+\item Batch\+Normalization (\href{https://keras.io/api/layers/normalization_layers/batch_normalization/}{\texttt{ https\+://keras.\+io/api/layers/normalization\+\_\+layers/batch\+\_\+normalization/}})
+\item Layer used to normalize the input to the network.
+\item Conv2D (\href{https://www.tensorflow.org/api_docs/python/tf/keras/layers/Conv2D}{\texttt{ https\+://www.\+tensorflow.\+org/api\+\_\+docs/python/tf/keras/layers/\+Conv2D}})
+\item Layer used to perform 2D convolutional operations on the input.
+\item Max\+Pool2D (\href{https://www.tensorflow.org/api_docs/python/tf/keras/layers/MaxPool2D}{\texttt{ https\+://www.\+tensorflow.\+org/api\+\_\+docs/python/tf/keras/layers/\+Max\+Pool2D}})
+\item Layer used to perform max pooling operations on the input.
+\item Flatten (\href{https://www.tensorflow.org/api_docs/python/tf/keras/layers/Flatten}{\texttt{ https\+://www.\+tensorflow.\+org/api\+\_\+docs/python/tf/keras/layers/\+Flatten}})
+\item Layer used to flatten the input to the network.
+\item Dense (\href{https://www.tensorflow.org/api_docs/python/tf/keras/layers/Dense}{\texttt{ https\+://www.\+tensorflow.\+org/api\+\_\+docs/python/tf/keras/layers/\+Dense}})
+\item Layer used to create a fully connected neural network. 
+\end{DoxyItemize}
